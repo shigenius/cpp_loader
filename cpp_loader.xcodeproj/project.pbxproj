@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CBBB4D91FA2F2C900E1A3B6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBB4D81FA2F2C900E1A3B6 /* main.swift */; };
+		5CBBB5351FA3075200E1A3B6 /* SocketControllerCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBB5331FA3075200E1A3B6 /* SocketControllerCpp.cpp */; };
+		5CBBB5381FA3077800E1A3B6 /* SocketControllerObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5CBBB5361FA3077800E1A3B6 /* SocketControllerObjC.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		5CBBB4D51FA2F2C900E1A3B6 /* cpp_loader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_loader; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CBBB4D81FA2F2C900E1A3B6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5CBBB52C1FA2FC5B00E1A3B6 /* cpp_loader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cpp_loader-Bridging-Header.h"; sourceTree = "<group>"; };
+		5CBBB5331FA3075200E1A3B6 /* SocketControllerCpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SocketControllerCpp.cpp; sourceTree = "<group>"; };
+		5CBBB5341FA3075200E1A3B6 /* SocketControllerCpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SocketControllerCpp.hpp; sourceTree = "<group>"; };
+		5CBBB5361FA3077800E1A3B6 /* SocketControllerObjC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SocketControllerObjC.mm; sourceTree = "<group>"; };
+		5CBBB5371FA3077800E1A3B6 /* SocketControllerObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketControllerObjC.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				5CBBB4D81FA2F2C900E1A3B6 /* main.swift */,
+				5CBBB5331FA3075200E1A3B6 /* SocketControllerCpp.cpp */,
+				5CBBB5341FA3075200E1A3B6 /* SocketControllerCpp.hpp */,
+				5CBBB5361FA3077800E1A3B6 /* SocketControllerObjC.mm */,
+				5CBBB5371FA3077800E1A3B6 /* SocketControllerObjC.h */,
+				5CBBB52C1FA2FC5B00E1A3B6 /* cpp_loader-Bridging-Header.h */,
 			);
 			path = cpp_loader;
 			sourceTree = "<group>";
@@ -94,6 +106,7 @@
 				TargetAttributes = {
 					5CBBB4D41FA2F2C900E1A3B6 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -120,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBBB5351FA3075200E1A3B6 /* SocketControllerCpp.cpp in Sources */,
 				5CBBB4D91FA2F2C900E1A3B6 /* main.swift in Sources */,
+				5CBBB5381FA3077800E1A3B6 /* SocketControllerObjC.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,8 +251,12 @@
 		5CBBB4DD1FA2F2C900E1A3B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cpp_loader/cpp_loader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -245,8 +264,11 @@
 		5CBBB4DE1FA2F2C900E1A3B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cpp_loader/cpp_loader-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

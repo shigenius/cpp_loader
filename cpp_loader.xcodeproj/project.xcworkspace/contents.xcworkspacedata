@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:cpp_loader.xcodeproj">
+      location = "self:/Users/shigetomi/workspace/TA/AR/cppfromswift/cpp_loader.xcodeproj">
    </FileRef>
 </Workspace>
