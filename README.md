@@ -1,2 +1,4 @@
 # cpp_loader
-swiftでcpp
+swiftからc++を呼ぶ
+
+swift -> objectC++ -> C++
